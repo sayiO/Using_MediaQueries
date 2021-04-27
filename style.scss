@@ -1,0 +1,61 @@
+$color-1: #cdb4db; // Mobile
+$color-2: #fff1e6; // Tablet
+$color-3: #52b788; // Laptop
+$color-4: #bee1e6; // Desktop
+//screen breakpoints variables
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    body {
+        font-size: 35px;
+        font-family: sans-serif;
+    }
+}
+
+.container {
+    //to place text at the center
+    display: grid;
+    place-items: center;
+    background-color: white;
+    height: 100vh;
+}
+
+@media screen and (max-width: $desktop) {
+    .container {
+        background-color: $color-4;
+    }
+}
+
+@media screen and(min-width: $laptop) {
+    .container {
+        background-color: $color-3;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .container {
+        background-color: $color-2;
+    }
+    @media screen and (max-width: $mobile) {
+        .container {
+            background-color: $color-1;
+        }
+    }
+}
+
+.text {}
+
+#size {
+    position: absolute;
+    //positioning screen size below our main text
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    color: green;
+    font-size: 35px;
+}
